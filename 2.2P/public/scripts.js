@@ -22,6 +22,24 @@ async function sendToServer() {
     const data = await response.json();
 
     if (data.error) {
+        console.log(data.error)
+        document.getElementById("postResponse").innerText = data.error
+        return;
+    }
+    console.log(data.message)
+    document.getElementById("postResponse").innerText = data.message
+}
+
+async function getFromServer() {
+
+    const response = await fetch("/result", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" }
+    });
+
+    const data = await response.json();
+
+    if (data.error) {
         document.getElementById("result").innerText = "Error: " + data.error;
         return;
     }

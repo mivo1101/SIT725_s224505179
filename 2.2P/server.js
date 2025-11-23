@@ -15,18 +15,20 @@ app.post('/calculate', (req, res) => {
   const numB = parseFloat(b);
 
   if (isNaN(numA) || isNaN(numB)) {
+    lastResult = null
     return res.status(400).json({ error: "Please send valid numbers!" });
   }
 
   lastResult = numA + numB;
 
-  res.json({ message: "Calculation stored", result: lastResult });
+  res.json({ message: "Numbers received!" });
 });
 
 app.get('/result', (req, res) => {
   if (lastResult === null) {
-    return res.json({ result: "No calculation yet" });
+    return res.json({ error: "No calculation yet" });
   }
+
   res.json({ result: lastResult });
 });
 

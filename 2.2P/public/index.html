@@ -31,9 +31,12 @@
                 <h3>Calculator</h3>
                 <input id="a" type="number" placeholder="Enter number a">
                 <input id="b" type="number" placeholder="Enter number b">
-                <button class="waves-effect waves-light btn" onclick="sendToServer()">Sum</button>
-                
+                <button class="waves-effect waves-light btn" onclick="sendToServer()">POST Numbers to Server</button>
+                <div id="postResponse" style="font-size: 32px; font-weight: bold; color: #1e88e5;"></div>
+
+
                 <h3>Result</h3>
+                <button class="waves-effect waves-light btn" onclick="getFromServer()">GET Result from Server</button>
                 <div id="result" style="font-size: 32px; font-weight: bold; color: #1e88e5;"></div>
             </div>
         </div>

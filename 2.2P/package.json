@@ -2,10 +2,10 @@
     "name": "sit725",
     "version": "1.0.0",
     "description": "SIT725 - 2.2P",
-    "main": "index.js",
+    "main": "server.js",
     "scripts": {
-        "start": "node index.js",
-        "start:dev": "nodemon index.js"
+        "start": "node server.js",
+        "start:dev": "nodemon server.js"
     },
     "author": "Mi Vo",
     "license": "ISC",
