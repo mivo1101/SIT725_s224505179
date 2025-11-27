@@ -1,0 +1,35 @@
+{
+  "name": "3.2p",
+  "version": "1.0.0",
+  "description": "sit725-3.2p",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mivo1101/SIT725_s224505179/tree/main/3.2p.git"
+  },
+
+  "keywords": [
+    "Nodejs",
+    "Express",
+    "Materialize",
+    "HTML",
+    "JS",
+    "CSS"
+  ],
+
+  "author": "Mi Vo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mivo1101/SIT725_s224505179/tree/main/3.2p/issues"
+  },
+
+  "homepage": "https://github.com/mivo1101/SIT725_s224505179/tree/main/3.2p#readme",
+
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
