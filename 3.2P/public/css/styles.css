@@ -27,3 +27,8 @@ nav {
     background-color: gold;
     color: black;
 }
+.card .card-image img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
