@@ -1,0 +1,29 @@
+nav {
+    background-color: black;
+}
+.navbar-size {
+    width: 95%;
+    margin: 0 auto;
+}
+.logo-size {
+    height: 56px;
+    margin: 4px 0;
+}
+.main-body {
+    background-color: white;
+    color: black;
+    height: calc(100vh - 64px);
+}
+.materialboxed-image {
+    margin: 0 auto;
+    height: 400px;
+}
+.click-me-button {
+    background-color: black;
+    color: white;
+    margin-top: 35px;
+}
+.click-me-button:hover {
+    background-color: gold;
+    color: black;
+}
