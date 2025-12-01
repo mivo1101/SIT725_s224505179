@@ -2,26 +2,19 @@ const clickMe = () => {
     alert("Thanks for clicking me!")
 }
 
-const cardList = [
-    {
-        title: "Non La",
-        image: "images/nonla.jpg",
-        link: "About Non La",
-        description: "Non La is a traditional, iconic Vietnamese hat, handcrafted from palm leaves and bamboo, used primarily to shield the wearer from the sun and rain."
-    },
-    {
-        title: "Ao Dai",
-        image: "images/aodai (1).jpeg",
-        link: "About Ao Dai",
-        description: "Ao Dai is the elegant and iconic national garment of Vietnam. It is a powerful cultural symbol that embodies the grace, beauty, and national pride of the Vietnamese people."
-    },
-    {
-        title: "Ha Noi",
-        image: "images/hanoi.webp",
-        link: "About Ha Noi",
-        description: "Hanoi is the vibrant capital city of Vietnam, blending over a thousand years of history with bustling streets, ancient temples, and a world-renowned culinary scene."
+async function fetchCardList(url) {
+    const response = await fetch(url, {
+        method: "GET"
+    });
+
+    const data = await response.json();
+
+    if (data.error) {
+        console.error("Data error from fetching!")
+        return;
     }
-]
+    return data;
+}
 
 const addCards = (items) => {
     items.forEach(item => {
@@ -60,7 +53,9 @@ const submitForm = () => {
     console.log("Form Data Submitted: ", formData);
 }
 
-$(document) .ready(function() {
+$(document) .ready(async function() {
+    const cardList = await fetchCardList('/cardList')
+
     $('.materialboxed') .materialbox();
     $('#formSubmit') .click(()=>{
         submitForm();
