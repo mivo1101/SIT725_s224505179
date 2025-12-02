@@ -1,0 +1,14 @@
+{
+  "name": "4.2p",
+  "version": "1.0.0",
+  "description": "sit725-4.2p",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Mi Vo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

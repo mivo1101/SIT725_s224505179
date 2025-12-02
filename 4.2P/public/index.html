@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>GoVietnam</title>
+
+        <meta name="description" content="SIT725-4.2P-s224505179">
+        <meta name="author" content="Mi Vo">
+
+        <meta property="og:title" content="SIT725 4.2P">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="SIT725-4.2P-s224505179">
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-wrapper navbar-size">
+                <a href="#" class="brand-logo">
+                    <img class="logo-size" src="images/govnlogo-yellow.png">
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/mi-vo-chau-tra/">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="main-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <h1 id="heading">Welcome to <b style="color: gold;">GoVietnam</b></h1>
+                        <p class="flow-text">This is a travel website introducing the beauty of Vietnam.
+                        <br>Project created by Mi Vo (s224505179) as part of SIT725.</p>
+                    </div>
+                    <div class="col s12 center-align">
+                        <img class="materialboxed materialboxed-image" src="images/vn.jpg">
+                    </div>
+                    <div class="col s12 center-align">
+                        <a class="waves-effect waves-light btn click-me-button modal-trigger" data-target="modall" id="clickMeButton">
+                            <i class="material-icons left">auto_fix_high</i>Click Me
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="row" id="card-section">
+                    <!--Dynamic cards-->
+                </div>
+            </div>
+
+            <!--Modal Structure-->
+            <div id="modall" class="modal modal-fixed-footer">
+                <div class="row modal-content">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input placeholder="Enter your first name" id="first_name" type="text" class="validate">
+                                <label for="first_name">First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input placeholder="Enter your last name" id="last_name" type="text" class="validate">
+                                <label for="last_name">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="Enter your password" id="password" type="password" class="validate">
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="Enter your email" id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 center-align">
+                                <a class="waves-effect waves-light btn" id="formSubmit">Submit</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
