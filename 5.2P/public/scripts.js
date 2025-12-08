@@ -1,11 +1,18 @@
 async function getBooks() {
-    const response = await fetch("/api/books", {
+    const res = await fetch("/api/books", {
         method: "GET",
     });
 
-    const books = await response.json();
+    const books = await res.json();
 
-    document.getElementById("bookList").innerText = books
+    const bookInfo = document.getElementById("bookList");
+    bookInfo.innerHTML = "";
+
+    books.forEach(book => {
+        const item = document.createElement("p");
+        item.textContent = `${book.title} - ${book.author}`;
+        bookInfo.appendChild(item);
+    });
 };
 
-getBooks()
+window.onload = getBooks;
