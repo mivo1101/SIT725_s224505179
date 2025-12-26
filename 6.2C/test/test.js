@@ -25,14 +25,18 @@ describe("Calculator 6.2C", function() {
 
     // Integration Testing (REST API)
     describe("Integration Tests: API Endpoints", function() {
-        let baseUrl = "http://localhost:3000";
+        let baseUrl;
         let server;
 
-        before(function() {
-            server = app.listen(3000);
+        before(function(done) {
+            server = app.listen(0, function() {
+                const port = server.address().port;
+                baseUrl = `http://localhost:${port}`;
+                done();
+            });
         });
-        after(function() {
-            server.close();
+        after(function(done) {
+            server.close(done);
         });
 
         // Test 4: Valid data (Status 200)
@@ -41,10 +45,15 @@ describe("Calculator 6.2C", function() {
                 url: baseUrl + "/calculate",
                 json: { a: 10, b: 20 }
             }, function(error, response, body) {
-                expect(response.statusCode).to.equal(200);
-                expect(body.result).to.equal(30);
-                expect(body.message).to.equal("Numbers received!");
-                done();
+                if (error) return done(error); 
+                try {
+                    expect(response.statusCode).to.equal(200);
+                    expect(body.result).to.equal(30);
+                    expect(body.message).to.equal("Numbers received!");
+                    done();
+                } catch (e) {
+                    done(e);
+                }
             });
         });
 
@@ -54,8 +63,13 @@ describe("Calculator 6.2C", function() {
                 url: baseUrl + "/calculate",
                 json: { a: "invalid", b: 20 }
             }, function(error, response, body) {
-                expect(response.statusCode).to.equal(400);
-                done();
+                if (error) return done(error);
+                try {
+                    expect(response.statusCode).to.equal(400);
+                    done();
+                } catch (e) {
+                    done(e);
+                }
             });
         });
     });
