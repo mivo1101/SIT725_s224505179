@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Emoji Sharing Board</title>
+
+        <meta name="description" content="SIT725-7.2P-s224505179">
+        <meta name="author" content="Mi Vo">
+
+        <meta property="og:title" content="SIT725 7.2P">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="SIT725-7.2P-s224505179">
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>How are you feeling?</h1>
+        <p>Click an emoji to share it with everyone online!</p>
+
+        <button onclick="sendEmoji('👍')">👍</button>
+        <button onclick="sendEmoji('😂')">😂</button>
+        <button onclick="sendEmoji('🔥')">🔥</button>
+        <button onclick="sendEmoji('❤️')">❤️</button>
+
+        <div id="board"></div>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="scripts.js"></script>
+    </body>
+</html>
